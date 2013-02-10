@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean:beans xmlns:bean="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/security"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+    <http pattern="/resources/**" security="none"/>
+    <http auto-config="true" use-expressions="true" create-session="ifRequired">
+        <intercept-url pattern="/"
+                access="hasRole('ROLE_ANONYMOUS') or hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/login/*"
+                access="hasRole('ROLE_ANONYMOUS') or hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/logout"
+                access="hasRole('ROLE_ANONYMOUS') or hasRole('ROLE_USER')"/>
+        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/events/" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
+
+        <form-login login-page="/login/form"
+                login-processing-url="/login"
+                username-parameter="username"
+                password-parameter="password"
+                authentication-failure-url="/login/form?error"/>
+        <logout logout-url="/logout"
+                logout-success-url="/login/form?logout"/>
+    </http>
+    <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="user1@example.com"
+                        password="user1"
+                        authorities="ROLE_USER"/>
+                <user name="admin1@example.com"
+                        password="admin1"
+                        authorities="ROLE_USER,ROLE_ADMIN"/>
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+</bean:beans>

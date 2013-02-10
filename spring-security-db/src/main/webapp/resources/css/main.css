@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #FFFFFF;
+}
+#header-container {
+    color: #FFFFFF;
+    background-color: #000000;
+}
+#header, .nav li {
+    padding: .25em;
+    padding-top: 2em;
+}
+.nav-account {
+    float: right;
+}
+.nav {
+    display: inline;
+}
+.inner {
+    margin: 0 auto;
+    width: 65%;
+    padding: 1em;
+}
+.nav li:after {
+    content: ' |';
+}
+.nav li:last-child:after {
+    content: '';
+}
+
+.nav li {
+    display: inline;
+    list-style-type: none;
+}
+.nav a, th {
+    color: #FFFFFF;
+}
+a:hover {
+    text-decoration: none;
+}
+
+#title {
+    margin: .25em 0;
+}
+
+#create {
+    margin-top: 1em;
+    float: right;
+}
+table {
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+th {
+    background-color: #f79232;
+}
+td {
+    padding: .25em;
+}
+#content li {
+    margin: 1em;
+}
+legend {
+    display: none;
+}
+fieldset {
+    border-width: 0;
+}
+
+label {
+    display: block;
+    margin: .5em .5em .5em 0;
+    font-weight: bold;
+}
+label[for=remember] {
+    display: inline-block;
+}
+textarea {
+    width: 95%;
+    height: 10em;
+}
+input {
+    padding: .15em;
+}
+input[type=text] {
+    width: 25em;
+}
+#submit {
+    margin-top: 1em;
+}
+
+.errors {
+    color: red;
+}
+.success {
+    color: green;
+    font-weight: bold;
+    font-size: 1.5em;
+}

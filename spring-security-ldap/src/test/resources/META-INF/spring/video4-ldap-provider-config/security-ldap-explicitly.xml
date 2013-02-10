@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="ldapAuthenticationProvider"
+            class="org.springframework.security.ldap.authentication.LdapAuthenticationProvider">
+        <constructor-arg ref="ldapBindAuthenticator"/>
+        <constructor-arg ref="ldapAuthoritiesPopulator"/>
+        <property name="userDetailsContextMapper" ref="userDetailsContextMapper" />
+    </bean>
+
+    <bean id="ldapBindAuthenticator"
+            class="org.springframework.security.ldap.authentication.BindAuthenticator">
+        <constructor-arg ref="ldapServer"/>
+        <property name="userSearch" ref="ldapSearch"/>
+    </bean>
+
+    <bean id="ldapSearch"
+            class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+        <constructor-arg value="ou=users"/> <!-- use-search-base -->
+        <constructor-arg value="(uid={0})"/> <!-- user-search-filter -->
+        <constructor-arg ref="ldapServer"/>
+    </bean>
+
+    <bean id="ldapAuthoritiesPopulator"
+            class="com.packtpub.springsecurity.ldap.userdetails.ad.ActiveDirectoryLdapAuthoritiesPopulator"/>
+            
+    <bean id="userDetailsContextMapper"
+        class="org.springframework.security.ldap.userdetails.LdapUserDetailsMapper" />
+</beans>

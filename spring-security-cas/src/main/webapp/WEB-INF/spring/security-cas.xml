@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:task="http://www.springframework.org/schema/task"
+    xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <bean id="serviceProperties"
+            class="org.springframework.security.cas.ServiceProperties">
+        <property name="service"
+                value="https://${cas.service.host}/calendar/login"/>
+    </bean>
+    <!--
+        Allows changing where the CAS Server and CAS Service are easily
+        by specifying System Arguments or replacing the values only in one place.
+        Could also use external properties file -->
+    <context:property-placeholder
+            system-properties-mode="OVERRIDE" properties-ref="environment"/>
+    <util:properties id="environment">
+        <prop key="cas.service.host">localhost:8443</prop>
+        <prop key="cas.server.host">localhost:8443</prop>
+    </util:properties>
+
+    <!-- sends to the CAS Server, must be in entry-point-ref of security.xml -->
+    <bean id="casEntryPoint"
+        class="org.springframework.security.cas.web.CasAuthenticationEntryPoint">
+        <property name="serviceProperties" ref="serviceProperties"/>
+        <property name="loginUrl" value="https://${cas.server.host}/cas/login" />
+    </bean>
+
+    <!-- authenticates CAS tickets, must be in custom-filter of security.xml -->
+    <bean id="casFilter"
+        class="org.springframework.security.cas.web.CasAuthenticationFilter">
+        <property name="authenticationManager" ref="authenticationManager"/>
+        <property name="filterProcessesUrl" value="/login"/>
+    </bean>
+
+    <bean id="casAuthProvider" class="org.springframework.security.cas.authentication.CasAuthenticationProvider">
+        <property name="ticketValidator" ref="ticketValidator"/>
+        <property name="serviceProperties" ref="serviceProperties"/>
+        <property name="key" value="casJbcpCalendar"/>
+        <property name="authenticationUserDetailsService" ref="authenticationUserDetailsService"/>
+        <property name="statelessTicketCache" ref="statelessTicketCache"/>
+    </bean>
+    <bean id="statelessTicketCache" class="org.springframework.security.cas.authentication.EhCacheBasedTicketCache">
+        <property name="cache">
+            <bean class="net.sf.ehcache.Cache"
+                    init-method="initialise" destroy-method="dispose">
+                <constructor-arg value="casTickets"/>
+                <constructor-arg value="50"/>
+                <constructor-arg value="true"/>
+                <constructor-arg value="false"/>
+                <constructor-arg value="3600"/>
+                <constructor-arg value="900"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="ticketValidator" class="org.jasig.cas.client.validation.Saml11TicketValidator">
+        <constructor-arg value="https://${cas.server.host}/cas" />
+    </bean>
+    <bean id="authenticationUserDetailsService" class="org.springframework.security.cas.userdetails.GrantedAuthorityFromAssertionAttributesUserDetailsService">
+        <constructor-arg>
+            <array>
+                <value>role</value>
+            </array>
+        </constructor-arg>
+    </bean>
+
+    <!-- Handles a Single Logout Request from the CAS Server must be in custom-filter of security.xml -->
+    <bean id="singleLogoutFilter" class="org.jasig.cas.client.session.SingleSignOutFilter"/>
+</beans>
