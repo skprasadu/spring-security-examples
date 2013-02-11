@@ -7,4 +7,4 @@ In this sample, we demonstrated a simple Calendar application, where a regular u
 
 We will demonstrate the Spring Security capability for Inmemory authorization provider, JDBC authorization provider, LDAP authorization provider, CAS Single sign on authorization provider.
 
-Refer to this [blog](http://krishnasblog.com/2012/10/01/junit-testing-spring-security-spring-mvc-activiti-bpm/) for more details.
+Refer to this [blog](http://krishnasblog.com/2013/02/10/spring-test-mvc-junit-testing-spring-security-layer-with-inmemorydaoimpl-2/) for more details.
