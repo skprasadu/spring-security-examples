@@ -12,8 +12,8 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-    <context:component-scan base-package="com.packtpub.springsecurity">
-        <context:exclude-filter type="regex" expression="com.packtpub.springsecurity.web.*"/>
+    <context:component-scan base-package="com.example.springsecurity">
+        <context:exclude-filter type="regex" expression="com.example.springsecurity.web.*"/>
     </context:component-scan>
 
     <tx:annotation-driven />
@@ -32,7 +32,7 @@
           p:dataSource-ref="dataSource"/>
 
     <bean id="calendarService"
-          class="com.packtpub.springsecurity.service.DefaultCalendarService"
+          class="com.example.springsecurity.service.DefaultCalendarService"
           autowire="constructor">
 
     </bean>
@@ -41,10 +41,10 @@
         Here we explicitly wire the CalendarUserAuthenticationProvider to use an insecure implementation
         of DefaultCalendarService to avoid a circular reference when using intercept-methods on calendarService.
      -->
-    <bean id="calendarUserAuthenticationProvider" class="com.packtpub.springsecurity.authentication.CalendarUserAuthenticationProvider">
+    <bean id="calendarUserAuthenticationProvider" class="com.example.springsecurity.authentication.CalendarUserAuthenticationProvider">
         <constructor-arg>
             <bean id="calendarService"
-                class="com.packtpub.springsecurity.service.DefaultCalendarService"
+                class="com.example.springsecurity.service.DefaultCalendarService"
                 autowire="constructor"/>
         </constructor-arg>
     </bean>
