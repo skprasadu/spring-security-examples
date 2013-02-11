@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.springsecurity.web.controllers;
+package com.example.springsecurity.web.controllers.util;
 
 
-class WebContextLoader extends GenericWebContextLoader {
+public class WebContextLoader extends GenericWebContextLoader {
 
 	public WebContextLoader() {
 		super("src/main/webapp", false);

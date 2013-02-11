@@ -1,6 +1,6 @@
-package com.example.springsecurity.web.controllers;
+package com.example.springsecurity.web.controllers.util;
 
-import static com.example.springsecurity.web.controllers.SecurityRequestPostProcessors.userDeatilsService;
+import static com.example.springsecurity.web.controllers.util.LdapSecurityRequestPostProcessors.userDeatilsService;
 import static org.springframework.test.web.server.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.server.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.server.result.MockMvcResultMatchers.forwardedUrl;
@@ -9,19 +9,13 @@ import static org.springframework.test.web.server.result.MockMvcResultMatchers.s
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.FilterChainProxy;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.server.MockMvc;
 import org.springframework.test.web.server.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(loader = WebContextLoader.class, value = { "classpath:/META-INF/spring/services.xml",
-		"classpath:/META-INF/spring/security.xml", "classpath:/META-INF/spring/mvc-config.xml" })
-public class EventsControllerTest {
+public class LdapSecurityControllerTest {
 
 	@Autowired
 	private FilterChainProxy springSecurityFilterChain;

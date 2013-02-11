@@ -24,7 +24,7 @@
     </bean>
 
     <bean id="ldapAuthoritiesPopulator"
-            class="com.packtpub.springsecurity.ldap.userdetails.ad.ActiveDirectoryLdapAuthoritiesPopulator"/>
+            class="com.example.springsecurity.ldap.userdetails.ad.ActiveDirectoryLdapAuthoritiesPopulator"/>
             
     <bean id="userDetailsContextMapper"
         class="org.springframework.security.ldap.userdetails.LdapUserDetailsMapper" />

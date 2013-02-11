@@ -12,7 +12,7 @@
     <category name="org.springframework.security">
         <priority value="INFO" />
     </category>
-    <category name="com.packtpub.springsecurity">
+    <category name="com.example.springsecurity">
         <priority value="DEBUG" />
     </category>
     
