@@ -1,4 +1,4 @@
-package com.packtpub.springsecurity.dataaccess;
+package com.example.springsecurity.dataaccess;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,7 +16,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.packtpub.springsecurity.domain.CalendarUser;
+import com.example.springsecurity.domain.CalendarUser;
 
 /**
  * A jdbc implementation of {@link CalendarUserDao}.

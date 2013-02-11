@@ -1,10 +1,10 @@
-package com.packtpub.springsecurity.dataaccess;
+package com.example.springsecurity.dataaccess;
 
 import java.util.List;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 
-import com.packtpub.springsecurity.domain.CalendarUser;
+import com.example.springsecurity.domain.CalendarUser;
 
 /**
  * An interface for managing {@link CalendarUser} instances.

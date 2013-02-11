@@ -1,4 +1,4 @@
-package com.packtpub.springsecurity.web.controllers;
+package com.example.springsecurity.web.controllers;
 
 import java.io.UnsupportedEncodingException;
 

@@ -1,10 +1,10 @@
-package com.packtpub.springsecurity.service;
+package com.example.springsecurity.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.packtpub.springsecurity.dataaccess.CalendarUserDao;
-import com.packtpub.springsecurity.domain.CalendarUser;
+import com.example.springsecurity.dataaccess.CalendarUserDao;
+import com.example.springsecurity.domain.CalendarUser;
 
 /**
  * Returns the same user for every call to {@link #getCurrentUser()}. This is used prior to adding security, so that the

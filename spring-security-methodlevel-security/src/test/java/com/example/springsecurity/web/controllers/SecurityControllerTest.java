@@ -3,6 +3,7 @@ package com.example.springsecurity.web.controllers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -35,5 +36,15 @@ public class SecurityControllerTest {
 	@Test(expected = AuthenticationCredentialsNotFoundException.class)  
 	public void testForbiddenEvents() throws Exception {
         calendarService.findForUser(0);
+	}
+
+	@Test(expected=AccessDeniedException.class)
+	public void testWrongUserEvents() throws Exception {
+        Authentication auth = new UsernamePasswordAuthenticationToken("user2@example.com", "user2");
+        SecurityContext securityContext = SecurityContextHolder.getContext();
+        securityContext.setAuthentication(auth);
+
+        calendarService.findForUser(0);
+        SecurityContextHolder.clearContext();
 	}
 }

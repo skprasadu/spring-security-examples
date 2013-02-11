@@ -1,14 +1,14 @@
-package com.packtpub.springsecurity.service;
+package com.example.springsecurity.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.packtpub.springsecurity.dataaccess.EventDao;
-import com.packtpub.springsecurity.dataaccess.CalendarUserDao;
-import com.packtpub.springsecurity.domain.Event;
-import com.packtpub.springsecurity.domain.CalendarUser;
+import com.example.springsecurity.dataaccess.EventDao;
+import com.example.springsecurity.dataaccess.CalendarUserDao;
+import com.example.springsecurity.domain.Event;
+import com.example.springsecurity.domain.CalendarUser;
 
 /**
  * A default implementation of {@link CalendarService} that delegates to {@link EventDao} and {@link CalendarUserDao}.

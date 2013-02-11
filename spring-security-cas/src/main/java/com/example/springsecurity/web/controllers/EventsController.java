@@ -1,4 +1,4 @@
-package com.packtpub.springsecurity.web.controllers;
+package com.example.springsecurity.web.controllers;
 
 import java.util.Calendar;
 
@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.packtpub.springsecurity.domain.CalendarUser;
-import com.packtpub.springsecurity.domain.Event;
-import com.packtpub.springsecurity.service.CalendarService;
-import com.packtpub.springsecurity.service.UserContext;
-import com.packtpub.springsecurity.web.model.CreateEventForm;
+import com.example.springsecurity.domain.CalendarUser;
+import com.example.springsecurity.domain.Event;
+import com.example.springsecurity.service.CalendarService;
+import com.example.springsecurity.service.UserContext;
+import com.example.springsecurity.web.model.CreateEventForm;
 
 @Controller
 @RequestMapping("/events")

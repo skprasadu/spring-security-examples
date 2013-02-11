@@ -7,7 +7,7 @@
         <artifactId>jasig-parent</artifactId>
         <version>21</version>
     </parent>
-    <groupId>com.packtpub.springsecurity</groupId>
+    <groupId>com.example.springsecurity</groupId>
     <artifactId>cas-server-with-ldap</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>

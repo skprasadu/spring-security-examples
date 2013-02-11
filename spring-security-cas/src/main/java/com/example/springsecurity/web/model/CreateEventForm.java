@@ -1,4 +1,4 @@
-package com.packtpub.springsecurity.web.model;
+package com.example.springsecurity.web.model;
 
 import java.util.Calendar;
 
@@ -8,7 +8,7 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.packtpub.springsecurity.domain.Event;
+import com.example.springsecurity.domain.Event;
 
 /**
  * A form object that is used for creating a new {@link Event}. Using a different object is one way of preventing

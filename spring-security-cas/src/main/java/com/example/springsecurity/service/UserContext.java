@@ -1,6 +1,6 @@
-package com.packtpub.springsecurity.service;
+package com.example.springsecurity.service;
 
-import com.packtpub.springsecurity.domain.CalendarUser;
+import com.example.springsecurity.domain.CalendarUser;
 
 /**
  * Manages the current {@link CalendarUser}. This demonstrates how in larger applications it is good to abstract out

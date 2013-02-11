@@ -1,4 +1,4 @@
-package com.packtpub.springsecurity.domain;
+package com.example.springsecurity.domain;
 
 import java.io.Serializable;
 

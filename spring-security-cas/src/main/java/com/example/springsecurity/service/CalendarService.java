@@ -1,11 +1,11 @@
-package com.packtpub.springsecurity.service;
+package com.example.springsecurity.service;
 
 import java.util.List;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 
-import com.packtpub.springsecurity.domain.Event;
-import com.packtpub.springsecurity.domain.CalendarUser;
+import com.example.springsecurity.domain.Event;
+import com.example.springsecurity.domain.CalendarUser;
 
 public interface CalendarService {
 

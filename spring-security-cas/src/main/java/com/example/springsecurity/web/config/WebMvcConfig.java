@@ -1,4 +1,4 @@
-package com.packtpub.springsecurity.web.config;
+package com.example.springsecurity.web.config;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -42,7 +42,7 @@ import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
  *
  *     &lt;mvc:annotation-driven/&gt;
  *     &lt;mvc:resources location=&quot;/resources/&quot; mapping=&quot;/resources/**&quot; cache-period=&quot;31556926&quot;/&gt;
- *     &lt;context:component-scan base-package=&quot;com.packtpub.springsecurity.web.controllers&quot;/&gt;
+ *     &lt;context:component-scan base-package=&quot;com.example.springsecurity.web.controllers&quot;/&gt;
  *
  *     &lt;bean class=&quot;org.springframework.web.servlet.view.ContentNegotiatingViewResolver&quot;&gt;
  *         &lt;property name=&quot;mediaTypes&quot;&gt;
