@@ -16,7 +16,7 @@
         <property name="parameter" value="rememberme"/>
         <property name="cookieName" value="rememberme"/>
     </bean>
-    <bean id="tokenRepository" class="com.packtpub.springsecurity.web.authentication.rememberme.IpAwarePersistentTokenRepository">
+    <bean id="tokenRepository" class="com.example.springsecurity.web.authentication.rememberme.IpAwarePersistentTokenRepository">
         <constructor-arg>
             <bean class="org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl">
                 <property name="dataSource" ref="dataSource"/>

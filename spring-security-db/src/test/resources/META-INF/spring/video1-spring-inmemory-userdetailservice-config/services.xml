@@ -10,8 +10,8 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="com.packtpub.springsecurity">
-        <context:exclude-filter type="regex" expression="com.packtpub.springsecurity.web.*"/>
+    <context:component-scan base-package="com.example.springsecurity">
+        <context:exclude-filter type="regex" expression="com.example.springsecurity.web.*"/>
     </context:component-scan>
 
     <tx:annotation-driven />

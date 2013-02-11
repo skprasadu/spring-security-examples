@@ -7,8 +7,8 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Load com.packtpub.springsecurity.web.config.WebMvcConfig -->
-    <context:component-scan base-package="com.packtpub.springsecurity.web"/>
+    <!-- Load com.example.springsecurity.web.config.WebMvcConfig -->
+    <context:component-scan base-package="com.example.springsecurity.web"/>
 
 	<mvc:resources mapping="/resources/**" location="/resources/" /> 
 	<mvc:view-controller path="/login/form" view-name="/login"/>    
