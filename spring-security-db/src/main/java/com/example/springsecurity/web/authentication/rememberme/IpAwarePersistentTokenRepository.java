@@ -29,7 +29,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  *  &lt;/listener&gt;
  * </pre>
  *
- * @author Rob Winch
+ * 
  * @see RequestContextHolder
  */
 public final class IpAwarePersistentTokenRepository implements PersistentTokenRepository {

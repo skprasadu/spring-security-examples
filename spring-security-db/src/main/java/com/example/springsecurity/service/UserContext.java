@@ -7,7 +7,7 @@ import com.example.springsecurity.domain.CalendarUser;
  * accessing the current user to return the application specific user rather than interacting with Spring Security
  * classes directly.
  *
- * @author Rob Winch
+ * 
  *
  */
 public interface UserContext {

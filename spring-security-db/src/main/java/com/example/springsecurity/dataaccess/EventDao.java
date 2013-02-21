@@ -8,7 +8,7 @@ import com.example.springsecurity.domain.Event;
 /**
  * An interface for managing {@link Event}'s.
  *
- * @author Rob Winch
+ * 
  *
  */
 public interface EventDao {

@@ -10,7 +10,7 @@ import com.example.springsecurity.domain.CalendarUser;
  * Returns the same user for every call to {@link #getCurrentUser()}. This is used prior to adding security, so that the
  * rest of the application can be used.
  *
- * @author Rob Winch
+ * 
  */
 @Component
 public class UserContextStub implements UserContext {

@@ -9,7 +9,7 @@ import com.example.springsecurity.domain.CalendarUser;
 /**
  * An interface for managing {@link CalendarUser} instances.
  *
- * @author Rob Winch
+ * 
  *
  */
 public interface CalendarUserDao {

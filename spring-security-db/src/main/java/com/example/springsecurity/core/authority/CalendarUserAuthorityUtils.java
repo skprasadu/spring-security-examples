@@ -12,7 +12,7 @@ import com.example.springsecurity.domain.CalendarUser;
  * A utility class used for creating the {@link GrantedAuthority}'s given a {@link CalendarUser}. In a real solution
  * this would be looked up in the existing system, but for simplicity our original system had no notion of authorities.
  *
- * @author Rob Winch
+ * 
  *
  */
 public final class CalendarUserAuthorityUtils {

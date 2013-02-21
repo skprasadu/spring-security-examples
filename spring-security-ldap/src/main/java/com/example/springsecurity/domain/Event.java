@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * (someone who was invited to the event), when the event will occur, a summary, and a description. For simplicity, all
  * fields are required.
  *
- * @author Rob Winch
+ * 
  *
  */
 public class Event {

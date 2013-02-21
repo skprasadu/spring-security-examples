@@ -8,7 +8,7 @@ import com.example.springsecurity.domain.CalendarUser;
 /**
  * An interface for managing {@link Event}'s.
  *
- * @author Rob Winch
+ * 
  *
  */
 public interface EventDao {

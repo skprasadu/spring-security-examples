@@ -9,7 +9,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
  * user especially in large applications. This ensures that as you evolve your security requirements (update Spring
  * Security, leverage new Spring Security modules, or even swap out security implementations) you can do so easily.
  *
- * @author Rob Winch
+ * 
  *
  */
 public class CalendarUser implements Serializable {

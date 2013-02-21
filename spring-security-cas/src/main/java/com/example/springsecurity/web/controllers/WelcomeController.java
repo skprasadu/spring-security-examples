@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * This displays the welcome screen that shows what will be happening in this chapter.
  *
- * @author Rob Winch
+ * 
  *
  */
 @Controller

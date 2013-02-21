@@ -22,7 +22,7 @@ import com.example.springsecurity.domain.Event;
 /**
  * A jdbc implementation of {@link EventDao}.
  *
- * @author Rob Winch
+ * 
  *
  */
 @Repository

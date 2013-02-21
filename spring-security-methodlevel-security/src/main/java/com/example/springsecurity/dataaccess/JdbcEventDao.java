@@ -22,7 +22,7 @@ import com.example.springsecurity.domain.CalendarUser;
 /**
  * A jdbc implementation of {@link EventDao}.
  *
- * @author Rob Winch
+ * 
  *
  */
 @Repository

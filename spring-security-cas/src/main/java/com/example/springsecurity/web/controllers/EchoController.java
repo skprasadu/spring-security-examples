@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
  * Note that this controller will not work until the entire Proxy Ticket authentication section has been completed.
  * </p>
  *
- * @author Rob Winch
+ * 
  *
  */
 @Controller

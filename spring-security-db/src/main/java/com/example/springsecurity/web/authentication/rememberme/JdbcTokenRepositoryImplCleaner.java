@@ -19,7 +19,7 @@ import org.springframework.security.web.authentication.rememberme.JdbcTokenRepos
  * scheduling abstraction</a>.
  * </p>
  *
- * @author Rob Winch
+ * 
  *
  */
 public final class JdbcTokenRepositoryImplCleaner implements Runnable {

@@ -65,7 +65,7 @@ import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
  * &lt;/beans&gt;
  * </pre>
  *
- * @author Rob Winch
+ * 
  *
  */
 @Configuration

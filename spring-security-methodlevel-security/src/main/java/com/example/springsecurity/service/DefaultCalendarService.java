@@ -12,7 +12,7 @@ import com.example.springsecurity.domain.Event;
 /**
  * A default implementation of {@link CalendarService} that delegates to {@link EventDao} and {@link CalendarUserDao}.
  *
- * @author Rob Winch
+ * 
  *
  */
 public class DefaultCalendarService implements CalendarService {

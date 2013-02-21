@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * A controller that allows for viewing of account information.
  *
- * @author Rob Winch
+ * 
  *
  */
 @Controller

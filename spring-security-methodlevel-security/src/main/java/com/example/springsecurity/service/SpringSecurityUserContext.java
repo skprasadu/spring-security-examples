@@ -16,7 +16,7 @@ import com.example.springsecurity.domain.CalendarUser;
  * An implementation of {@link UserContext} that looks up the {@link CalendarUser} using the Spring Security's
  * {@link Authentication} by principal name.
  *
- * @author Rob Winch
+ * 
  *
  */
 @Component

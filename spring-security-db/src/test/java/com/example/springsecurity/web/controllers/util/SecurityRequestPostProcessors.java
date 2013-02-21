@@ -46,7 +46,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
  * <a href="https://jira.springsource.org/browse/SEC-2015">official support</a>
  * for Spring Security is planned.
  *
- * @author Rob Winch
+ * 
  */
 final class SecurityRequestPostProcessors {
 

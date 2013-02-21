@@ -21,7 +21,7 @@ import com.example.springsecurity.service.CalendarService;
  * A Spring Security {@link AuthenticationProvider} that uses our {@link CalendarService} for authentication. Compare
  * this to our {@link CalendarUserDetailsService} which is called by Spring Security's {@link DaoAuthenticationProvider}.
  *
- * @author Rob Winch
+ * 
  * @see CalendarUserDetailsService
  */
 public class CalendarUserAuthenticationProvider implements AuthenticationProvider {

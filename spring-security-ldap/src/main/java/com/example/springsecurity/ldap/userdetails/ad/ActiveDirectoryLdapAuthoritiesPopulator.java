@@ -17,7 +17,7 @@ import org.springframework.security.ldap.userdetails.LdapAuthoritiesPopulator;
  * implementation obtains the {@link GrantedAuthority}'s from the userData's memberOf attribute. It then uses the last
  * {@link LdapRdn}'s value as the {@link GrantedAuthority}.
  *
- * @author Rob Winch
+ * 
  * @see ActiveDirectoryLdapAuthenticationProvider
  */
 public final class ActiveDirectoryLdapAuthoritiesPopulator implements LdapAuthoritiesPopulator {

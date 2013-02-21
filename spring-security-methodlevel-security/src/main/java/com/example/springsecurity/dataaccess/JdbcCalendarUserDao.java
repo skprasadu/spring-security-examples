@@ -21,7 +21,7 @@ import com.example.springsecurity.domain.CalendarUser;
 /**
  * A jdbc implementation of {@link CalendarUserDao}.
  *
- * @author Rob Winch
+ * 
  *
  */
 @Repository
@@ -108,7 +108,7 @@ public class JdbcCalendarUserDao implements CalendarUserDao {
      * Create a new RowMapper that resolves {@link CalendarUser}'s given a column label prefix. By allowing the prefix
      * to be specified we can reuse the same {@link RowMapper} for joins in other tables.
      *
-     * @author Rob Winch
+     * 
      *
      */
     static class CalendarUserRowMapper implements RowMapper<CalendarUser> {
